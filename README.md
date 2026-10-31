@@ -29,7 +29,7 @@ Ride-hailing operations generate data across bookings, revenue, vehicle types, c
 
 ## KPI snapshot
 
-The dashboard's headline cards display the following measures. Values are shown as presented in the report and should be interpreted in the context of the source dataset and its filters.
+Values below are rounded values displayed in the supplied dashboard screenshots. They have not been independently recalculated from the source dataset and may vary with filters.
 
 | KPI | Displayed value |
 |---|---:|
@@ -41,6 +41,11 @@ The dashboard's headline cards display the following measures. Values are shown 
 
 Other report metrics include average revenue per booking, revenue per kilometre, booking completion/incompletion, customer cancellation, lost revenue, payment-method mix, and average customer/driver ratings.
 
+## Documentation
+
+- [Dashboard requirements and page guide](docs/dashboard-requirements.md)
+- [KPI interpretation, validation checklist and limitations](docs/insights-and-limitations.md)
+
 ## Tools and skills demonstrated
 
 - **Power BI** — report layout, navigation, interactive visuals and filtering
@@ -49,14 +54,21 @@ Other report metrics include average revenue per booking, revenue per kilometre,
 - **Business analytics** — translating operational data into questions and decisions
 - **Data visualization** — time trends, comparative bars, KPI cards, tables and heatmap-style demand analysis
 
-## Repository contents
+## Repository status
 
-The Power BI report (.pbix), presentation, insight report, and page screenshots were supplied for this project but are not yet included in this initial repository commit.
+Currently committed:
+- README.md
+- docs/dashboard-requirements.md
+- docs/insights-and-limitations.md
+- .gitignore
 
-Suggested structure as the repository grows:
+The supplied Power BI report files (Uber.pbix and uber_report_sp.pbix), presentation, insight report, and screenshots have **not** been uploaded to this repository yet. They were provided in the chat workspace, but the connected GitHub workflow used here supports text-file commits and does not expose a direct local-binary upload path. No placeholder screenshots or fake report files are included.
+
+Suggested structure for adding reviewed artifacts:
 
     uber-ride-analysis-powerbi/
     ├── README.md
+    ├── .gitignore
     ├── docs/
     │   ├── dashboard-requirements.md
     │   └── insights-and-limitations.md
@@ -72,18 +84,15 @@ Suggested structure as the repository grows:
 
 ## How to explore the report
 
-1. Open the Power BI .pbix file in **Microsoft Power BI Desktop**.
-2. Use the report's page navigation to move between Home, Overview, Vehicle, Revenue, Customer and Location.
-3. Apply the available vehicle, time, and location filters where applicable.
-4. Compare trends and breakdowns across pages rather than interpreting a single KPI in isolation.
+Once the .pbix file has been added, open it in **Microsoft Power BI Desktop**. Use the report's navigation to move between Home, Overview, Vehicle, Revenue, Customer and Location, then compare trends using consistent filter selections.
 
-The source dataset and refresh configuration are not included in this initial commit, so reproducing the exact figures may require the original data source and model configuration.
+The source dataset and refresh configuration are not included in this repository, so reproducing the exact figures may require the original data source and model configuration.
 
 ## Important interpretation notes
 
 - KPI cards and charts may respond to report filters; values should be compared using consistent filter selections.
 - “Lost bookings,” “lost revenue,” cancellation rates, and revenue risk depend on the definitions implemented in the report's measures.
-- The supplied project documents describe the intended analysis. Exact calculation logic should be verified against the DAX measures and data model before using figures for operational decisions.
+- Exact calculation logic should be verified against the DAX measures and data model before using figures for operational decisions.
 - This is an analytics portfolio project and should not be interpreted as an official Uber report.
 
 ## Acknowledgment
