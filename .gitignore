@@ -1,0 +1,22 @@
+# Power BI / temporary files
+*.tmp
+*.temp
+~$*
+*.bak
+*.log
+.DS_Store
+Thumbs.db
+
+# Editor and local environment
+.vscode/
+.idea/
+.env
+.env.*
+
+# Python analysis artifacts (if added later)
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Keep data and Power BI files out of Git unless intentionally reviewed.
+# Large source datasets should generally be distributed separately.
